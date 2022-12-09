@@ -74,13 +74,19 @@ const AlbumSchema = new Schema({
             type: Number,
             required: [true, 'A review needs a rating']
         },
+
         userId: {
             type: Schema.Types.ObjectId,
             required: [true, 'A user needs to be attached to a Album.'],
             ref: 'user'
         },
+        userName: {
+            type: String,
+            required: [true, "A Review needs a review"]
+        },
     }]
 
 })
 module.exports = getModel('Album', AlbumSchema)
+// module.exports = getModel('User', UserSchema)
 // module.exports = getModel('Review', ReviewSchema)

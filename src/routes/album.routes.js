@@ -23,6 +23,8 @@ router.put('/:id', AlbumCrudController.update)
 router.delete('/:id', AlbumCrudController.delete)
 
 // add a review
-router.post('/:id/add/review', AlbumReviewController.addReview)
+router.post('/:id/review', AlbumReviewController.addReview)
+router.delete('/:id/review/:reviewId', AlbumReviewController.removeReview)
+
 
 module.exports = router

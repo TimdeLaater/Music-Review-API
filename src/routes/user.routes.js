@@ -20,10 +20,14 @@ router.get('/', UserCrudController.getAll)
 router.get('/:id', UserCrudController.getOne)
 
 // update a user
-router.put('/:id', AuthController.validate, UserCrudController.update)
+
+router.put('/:id', UserCrudController.update)
+
 
 // remove a user
-router.delete('/:id', AuthController.validate, UserCrudController.delete)
+router.delete('/:id', UserCrudController.delete)
+
+// router.delete('/:id', AuthController.validate, UserCrudController.delete)
 //login
 router.post('/login', AuthController.login)
 //register
